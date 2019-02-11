@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'weapons/new'
+  get 'weapons/edit'
+  get 'weapons/show'
   devise_for :users
 
   root 'main_pages#index'
