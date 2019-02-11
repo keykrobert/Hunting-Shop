@@ -1,0 +1,9 @@
+    <br>
+    <%= weapon.name %><br/>
+	<%= weapon.desc %><br/>
+	<%= weapon.price %><br/></p>
+	<% weapon.photos.each do |photo| %>
+  <%= image_tag(photo.url, style: "width: 100px;") %><br>
+  <% end %>
+	<p><%= link_to "Read more", weapon_path(weapon.id) %></p>
+	<hr>

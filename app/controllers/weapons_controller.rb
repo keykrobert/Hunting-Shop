@@ -40,7 +40,7 @@ class WeaponsController < ApplicationController
   private
 
   def weapon_params
-    params.require(:weapon).permit(:name, :desc, :price)
+    params.require(:weapon).permit(:name, :desc, :price, photos: [])
   end
 
   def find_weapon

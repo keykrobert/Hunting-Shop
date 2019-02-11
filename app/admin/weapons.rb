@@ -11,5 +11,15 @@ ActiveAdmin.register Weapon do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-permit_params :name, :desc, :price
+
+permit_params :name, :desc, :price, photos: []
+form(html: { multipart: true }) do |f|
+    f.inputs do
+      f.input :name
+      f.input :desc
+      f.input :price
+      f.file_field :photos, multiple: true
+    end
+   f.actions
+end
 end
